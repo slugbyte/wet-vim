@@ -37,23 +37,21 @@ endfunction
 " #### COLOR      #########################################################
 let s:color = {}
 
-let s:color.wetblue0 = [104, '#3e6792']
-let s:color.wetblue1 = [111, '#9fbdf5']
-let s:color.wetblue2  = [64, '#abcbed']
+let s:color.wetblue0 =  [ 25, '#3e6792']
+let s:color.wetblue1 =  [ 74, '#9fbdf5']
+let s:color.wetblue2  = [117, '#abcbed']
 
-let s:color.weterror = [160, '#D70000']
+let s:color.weterror = [196, '#D70000']
 let s:color.wetalert = [217, '#FFAFAF']
-let s:color.wetdebug = [143, '#637a60']
+let s:color.wetdebug = [ 65, '#637a60']
 
 let s:color.wetblack = [232, '#080808']
-let s:color.wetgray0 = [232, '#191919']
+let s:color.wetgray0 = [233, '#191919']
 let s:color.wetgray1 = [235, '#343444']
-let s:color.wetgray2 = [236, '#444457']
-let s:color.wetgray3 = [240, '#585868']
-let s:color.wetgray4= [177, '#45848b']
-let s:color.wetgray5 = [60, '#778492']
-let s:color.wetgray6 = [245, '#8A8A9A']
-let s:color.wetshell = [255, '#cdd6df']
+let s:color.wetgray2 = [237, '#444457']
+let s:color.wetgray3 = [244, '#778492']
+let s:color.wetgray4 = [245, '#8A8A9A']
+let s:color.wetshell = [252, '#cdd6df']
 let s:color.wetwhite = [231, '#FFFFFF']
 let s:color.wetempty = ['NONE', 'NONE']
 
@@ -69,10 +67,9 @@ call s:Tint('WetBlue2', s:color.wetempty, s:color.wetblue2, 'NONE')
 
 call s:Tint('WetGray0', s:color.wetempty, s:color.wetgray0, 'NONE')
 call s:Tint('WetGray1', s:color.wetempty, s:color.wetgray1, 'NONE')
+call s:Tint('WetGray1', s:color.wetempty, s:color.wetgray2, 'NONE')
 call s:Tint('WetGray3', s:color.wetempty, s:color.wetgray3, 'NONE')
 call s:Tint('WetGray4', s:color.wetempty, s:color.wetgray4, 'NONE')
-call s:Tint('WetGray5', s:color.wetempty, s:color.wetgray5, 'NONE')
-call s:Tint('WetGray6', s:color.wetempty, s:color.wetgray6, 'NONE')
 
 call s:Tint('WetWhite', s:color.wetempty, s:color.wetwhite, 'NONE')
 call s:Tint('WetBlack', s:color.wetempty, s:color.wetblack, 'NONE')
@@ -139,7 +136,7 @@ call s:TintLink('WetBlue1', 'Boolean')
 call s:TintLink('WetBlue1', 'Number')
 call s:TintLink('WetBlue1', 'Float')
 call s:TintLink('WetBlue1', 'String')
-call s:TintLink('WetGray5', 'Function')
+call s:TintLink('WetGray3', 'Function')
 
 " #### SYNTAX     #########################################################
 call s:Tint('Operator', s:color.wetempty, s:color.wetblue0, 'BOLD')
@@ -153,11 +150,11 @@ call s:TintLink('WetBlue0', 'Special')
 call s:TintLink('WetBlue1', 'Delimiter')
 call s:TintLink('WetBlue1', 'Statement')
 
-call s:TintLink('WetGray5', 'Macro')
-call s:TintLink('WetGray6', 'Define')
-call s:TintLink('WetGray6', 'PreProc')
-call s:TintLink('WetGray6', 'Constant')
-call s:TintLink('WetGray6', 'PreCondit')
+call s:TintLink('WetGray3', 'Macro')
+call s:TintLink('WetGray4', 'Define')
+call s:TintLink('WetGray4', 'PreProc')
+call s:TintLink('WetGray4', 'Constant')
+call s:TintLink('WetGray4', 'PreCondit')
 
 call s:TintLink('WetDebug', 'Title')
 call s:TintLink('WetDebug', 'Include')
