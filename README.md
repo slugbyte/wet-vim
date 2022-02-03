@@ -1,9 +1,9 @@
-# wet-vim
+![wet-vim icon](./asset/icon.png)
 > A cool tone vim theme
 
 ![wet-vim screenshot](./asset/screenshot.png)
 
-![wet-vim screenshot](./asset/lualine.png)
+![wet-vim lualine mode screenshot](./asset/lualine.png)
 
 ## Install
 1. Use any plugin manager you want. For example with [vim-plug](https://github.com/junegunn/vim-plug) just add `Plug 'slugbyte/wet-vim'` to your config.
