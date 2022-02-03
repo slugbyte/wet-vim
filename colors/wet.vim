@@ -96,6 +96,8 @@ call s:Tint('WildMenu', s:color.wetempty, s:color.wetblue0, 'BOLD')
 call s:Tint('TermCursor', s:color.wetshell, s:color.weterror, 'NONE')
 call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
 
+call s:TintLink('WetBlue1', 'CursorLineNr')
+
 call s:Tint('Pmenu', s:color.wetgray1, s:color.wetshell, 'NOCOMBINE')
 call s:Tint('PmenuSel', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
