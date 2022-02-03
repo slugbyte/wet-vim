@@ -26,7 +26,7 @@ set termguicolors
 ## [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) setup
 Add the following code to a nvim lua config
 ``` lua 
-lua wet_lualine = require('wet').lualine
+local wet_lualine = require('wet').lualine
 
 -- you can modify wet_lualine here if you want
 
