@@ -110,6 +110,8 @@ call s:TintLink('Search', 'IncSearch')
 call s:Tint('Visual', s:color.wetblue1, s:color.wetgray1, 'NONE')
 call s:Tint('VisualNos', s:color.wetblue2, s:color.wetgray1, 'NONE')
 
+call s:Tint('StatusLine', s:color.wetgray0, s:color.wetshell, 'BOLD')
+
 call s:TintLink('WetEmpty', 'Split')
 call s:TintLink('WetEmpty', 'LineNr')
 call s:TintLink('WetEmpty', 'Folded')
@@ -117,7 +119,6 @@ call s:TintLink('WetEmpty', 'Tabline')
 call s:TintLink('WetEmpty', 'Directory')
 call s:TintLink('WetEmpty', 'FoldColumn')
 call s:TintLink('WetEmpty', 'SignColumn')
-call s:TintLink('WetEmpty', 'StatusLine')
 call s:TintLink('WetEmpty', 'TablineSel')
 call s:TintLink('WetEmpty', 'TablineFill')
 
