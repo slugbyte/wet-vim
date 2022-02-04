@@ -224,6 +224,11 @@ call s:TintLink('htmlBoldUnderlineItalic', 'htmlItalicBoldUnderline')
 call s:TintLink('htmlBoldUnderlineItalic', 'htmlBoldItalicUnderline')
 call s:TintLink('WetBold', 'htmlTag')
 call s:TintLink('htmlTag', 'xmlTag')
+call s:TintLink("WetBlue0", "htmlTagName")
+
+" #### JSX        #########################################################
+call s:TintLink("WetBold", "jsxTag")
+call s:TintLink("WetBlue0", "jsxTagName")
 
 " #### JSON       #########################################################
 call s:TintLink("WetBlue0", "jsonKeyword")
@@ -233,6 +238,7 @@ call s:TintLink("WetBlue1", "jsonString")
 
 " #### MARKDOWN   #########################################################
 call s:TintLink('WetBlue1', 'markdownCode')
+
 
 " #### GIT GUTTER #########################################################
 call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetblue2, 'BOLD')

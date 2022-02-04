@@ -17,7 +17,7 @@ set termguicolors
 ```
 
 ## Features
-* Extra filetype highlighting for html, json, and markdown
+* Extra filetype highlighting for html, json, jsx, and markdown
 * Plugin support
   * [coc.nvim](https://github.com/neoclide/coc.nvim)
   * [GitGutter](https://github.com/jisaacks/GitGutter)
