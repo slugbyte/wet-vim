@@ -1,9 +1,9 @@
-"                                   _/      
-"  _/      _/      _/    _/_/    _/_/_/_/   
-" _/      _/      _/  _/_/_/_/    _/        
-"  _/  _/  _/  _/    _/          _/         
-"   _/      _/        _/_/_/      _/_/      
-" 
+"                                   _/
+"  _/      _/      _/    _/_/    _/_/_/_/
+" _/      _/      _/  _/_/_/_/    _/
+"  _/  _/  _/  _/    _/          _/
+"   _/      _/        _/_/_/      _/_/
+"
 " Name: wet-vim
 " License: Unlicense
 " Maintainer: Duncan Marsh (slugbyte@slugbyte.com)
@@ -197,6 +197,10 @@ call s:TintLink('WetUndercurl', 'SpellLocal')
 call s:Tint('Todo', s:color.wetempty, s:color.wetshell, 'BOLD')
 call s:Tint('Comment', s:color.wetempty, s:color.wetgray2, 'BOLD')
 call s:Tint('SpecialComment', s:color.wetgray2, s:color.wetblack, 'NONE')
+"
+" #### WHITESPACE #########################################################
+match ExtraWhitespace /\s\+$/
+call s:Tint('ExtraWhitespace', s:color.wetgray1, s:color.wetempty, 'NONE')
 
 " #### HTML/XML   #########################################################
 call s:Tint('htmlBold', s:color.wetempty, s:color.wetblue2, 'BOLD')

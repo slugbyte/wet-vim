@@ -23,7 +23,7 @@ return {
       b = { bg = colors.wetgray1, fg = colors.wetblue1},
       c = { bg = colors.wetgray0, fg = colors.wetblue1},
     },
-    insert = { 
+    insert = {
       a = { bg = colors.wetblue0, fg = colors.wetwhite, gui = 'bold' },
       b = { bg = colors.wetgray1, fg = colors.wetblue1},
       c = { bg = colors.wetgray0, fg = colors.wetblue1},
