@@ -1,4 +1,11 @@
+"                                   _/      
+"  _/      _/      _/    _/_/    _/_/_/_/   
+" _/      _/      _/  _/_/_/_/    _/        
+"  _/  _/  _/  _/    _/          _/         
+"   _/      _/        _/_/_/      _/_/      
+" 
 " Name: wet-vim
+" License: Unlicense
 " Maintainer: Duncan Marsh (slugbyte@slugbyte.com)
 " Repository: https://github.com/slugbyte/wet-vim
 
