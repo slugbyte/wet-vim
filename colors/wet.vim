@@ -121,7 +121,9 @@ call s:Tint('VisualNos', s:color.wetblue2, s:color.wetgray1, 'NONE')
 
 call s:Tint('StatusLine', s:color.wetgray0, s:color.wetshell, 'BOLD')
 
-call s:TintLink('WetEmpty', 'Split')
+call s:Tint('VertSplit', s:color.wetgray1, s:color.wetblack, 'NONE')
+call s:Tint('Split', s:color.wetgray1, s:color.wetblack, 'NONE')
+
 call s:TintLink('WetEmpty', 'LineNr')
 call s:TintLink('WetEmpty', 'Folded')
 call s:TintLink('WetEmpty', 'Tabline')
