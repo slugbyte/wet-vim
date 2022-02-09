@@ -105,11 +105,12 @@ call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
 
 call s:TintLink('WetBlue1', 'CursorLineNr')
 
-call s:Tint('Pmenu', s:color.wetgray1, s:color.wetshell, 'NOCOMBINE')
+call s:Tint('Pmenu', s:color.wetdebug, s:color.wetshell, 'NOCOMBINE')
 call s:Tint('PmenuSel', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
-call s:TintLink('Pmenu', 'ColorColumn')
 call s:TintLink('Pmenu', 'NormalFloat')
+
+call s:Tint('ColorColumn', s:color.wetshell, s:color.wetempty, 'NONE')
 
 call s:Tint('Search', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Search', 'IncSearch')
