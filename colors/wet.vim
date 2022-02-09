@@ -49,8 +49,9 @@ let s:color.wetblue1 =  [ 74, '#9fbdf5']
 let s:color.wetblue2  = [117, '#abcbed']
 
 let s:color.weterror = [196, '#D70000']
-let s:color.wetalert = [217, '#FFAFAF']
+let s:color.wetalert = [217, '#f3ea2a']
 let s:color.wetdebug = [ 65, '#637a60']
+let s:color.wetmenu = [ 65, '#3f4f3d']
 
 let s:color.wetblack = [232, '#080808']
 let s:color.wetgray0 = [233, '#191919']
@@ -105,12 +106,12 @@ call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
 
 call s:TintLink('WetBlue1', 'CursorLineNr')
 
-call s:Tint('Pmenu', s:color.wetdebug, s:color.wetshell, 'NOCOMBINE')
+call s:Tint('Pmenu', s:color.wetmenu, s:color.wetshell, 'NOCOMBINE')
 call s:Tint('PmenuSel', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
 call s:TintLink('Pmenu', 'NormalFloat')
 
-call s:Tint('ColorColumn', s:color.wetshell, s:color.wetempty, 'NONE')
+call s:Tint('ColorColumn', s:color.wetgray1, s:color.wetempty, 'NONE')
 
 call s:Tint('Search', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Search', 'IncSearch')
@@ -240,7 +241,6 @@ call s:TintLink("WetBlue1", "jsonString")
 " #### MARKDOWN   #########################################################
 call s:TintLink('WetBlue1', 'markdownCode')
 
-
 " #### GIT GUTTER #########################################################
 call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetblue2, 'BOLD')
 call s:Tint('GitGutterChange', s:color.wetempty, s:color.wetblue2, 'BOLD')
@@ -257,3 +257,13 @@ call s:Tint('CocMarkdownLink', s:color.wetempty, s:color.wetblue2, 'NONE')
 call s:Tint('CocHighlightText', s:color.wetempty, s:color.wetempty, 'UNDERCURL')
 call s:TintLink('WetBold', 'CocBold')
 call s:TintLink('WetBold', 'CocItalic')
+
+" #### DIAGNOSTIC #########################################################
+call s:Tint('DiagnosticHint', s:color.wetempty, s:color.wetwhite, 'BOLD')
+call s:Tint('DiagnosticInfo', s:color.wetempty, s:color.wetwhite, 'BOLD')
+call s:Tint('DiagnosticWarn', s:color.wetempty, s:color.wetalert, 'BOLD')
+call s:Tint('DiagnosticError', s:color.wetempty, s:color.weterror, 'BOLD')
+call s:Tint('DiagnosticSignHint', s:color.wetblue1, s:color.wetwhite, 'BOLD')
+call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetwhite, 'BOLD')
+call s:Tint('DiagnosticSignWarn', s:color.wetalert, s:color.wetwhite, 'BOLD')
+call s:Tint('DiagnosticSignError', s:color.weterror, s:color.wetwhite, 'BOLD')
