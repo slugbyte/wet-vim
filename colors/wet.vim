@@ -113,7 +113,7 @@ call s:TintLink('Pmenu', 'NormalFloat')
 
 call s:Tint('ColorColumn', s:color.wetgray1, s:color.wetempty, 'NONE')
 
-call s:Tint('Search', s:color.wetshell, s:color.wetblack, 'NONE')
+call s:Tint('Search', s:color.wetshell, s:color.wetdebug, 'NONE')
 call s:TintLink('Search', 'IncSearch')
 
 call s:Tint('Visual', s:color.wetblue1, s:color.wetgray1, 'NONE')
