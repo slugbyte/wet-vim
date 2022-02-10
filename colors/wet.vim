@@ -269,3 +269,16 @@ call s:Tint('DiagnosticSignHint', s:color.wetblue1, s:color.wetwhite, 'BOLD')
 call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetwhite, 'BOLD')
 call s:Tint('DiagnosticSignWarn', s:color.wetalert, s:color.wetwhite, 'BOLD')
 call s:Tint('DiagnosticSignError', s:color.weterror, s:color.wetwhite, 'BOLD')
+
+" #### TELESCOPE  #########################################################
+call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetblue0, 'NONE')
+call s:Tint('TelescopeTitle', s:color.wetempty, s:color.wetwhite, 'BOLD')
+
+" call s:Tint('TelescopeResultsNormal', s:color.wetmenu, s:color.wetwhite, 'NONE')
+call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
+call s:Tint('TelescopePreviewNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
+call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetblue0, 'NONE')
+
+call s:Tint('TelescopeSelection', s:color.wetmenu, s:color.wetshell, 'NONE')
+call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetblue1, 'NONE')
+
