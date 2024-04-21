@@ -1,0 +1,17 @@
+return {
+  wetblue0 = '#3e6792',
+  wetblue1 = '#9fbdf5',
+  wetblue2 = '#abcbed',
+  weterror = '#D70000',
+  wetalert = '#FFAFAF',
+  wetdebug = '#637a60',
+  wetblack = '#080808',
+  wetgray0 = '#191919',
+  wetgray1 = '#343444',
+  wetgray2 = '#444457',
+  wetgray3 = '#778492',
+  wetgray4 = '#8A8A9A',
+  wetshell = '#cdd6df',
+  wetwhite = '#FFFFFF',
+  wetempty = 'NONE',
+}
