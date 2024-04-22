@@ -51,13 +51,10 @@ let s:color.wetblue2  = [117, '#abcbed']
 let s:color.weterror = [196, '#D70000']
 let s:color.wetalert = [217, '#f3ea2a']
 let s:color.wetdebug = [ 65, '#637a60']
+
 let s:color.wetwarn = [217, '#ff7777']
-" let s:color.wetmenu = [ 65, '#3f4f3d']
-" let s:color.wetmenu = [ 65, '#323831']
 let s:color.wetmenu = [ 65, '#383b4f']
-" let s:color.wetfocus = [ 65, '#a2ad64']
 let s:color.wetfocus = [ 65, '#f5aa85']
-" let s:color.wetthing = [ 65, '#857a75']
 let s:color.wetthing = [245, '#7c7c9c']
 
 let s:color.wetblack = [232, '#080808']
@@ -114,15 +111,27 @@ call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
 call s:TintLink('WetBlue1', 'CursorLineNr')
 
 call s:Tint('Pmenu', s:color.wetgray0, s:color.wetshell, 'NOCOMBINE')
-call s:Tint('PmenuSel', s:color.wetshell, s:color.wetblack, 'NONE')
+call s:Tint('PmenuSel', s:color.wetdebug, s:color.wetempty, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
 call s:TintLink('Pmenu', 'NormalFloat')
+
+" nvim cmp
+call s:Tint('CmpItemKind', s:color.wetempty, s:color.wetshell, 'NONE')
+" call s:Tint('CmpItemKindSnippet', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('CmpItemKindText', s:color.wetempty, s:color.wetgray4, 'NONE')
+call s:Tint('CmpItemAbbr', s:color.wetempty, s:color.wetshell, 'NONE')
+call s:Tint('CmpItemAbbrMatch', s:color.wetempty, s:color.wetempty, 'NONE')
+call s:Tint('CmpItemAbbrMatchFuzzy', s:color.wetempty, s:color.wetempty, 'NONE')
+call s:Tint('CmpItemAbbrDeprecated', s:color.wetempty, s:color.wetgray2, 'NONE')
 
 call s:Tint('ColorColumn', s:color.wetgray1, s:color.wetempty, 'NONE')
 
 call s:Tint('Search', s:color.wetdebug, s:color.wetblack, 'NONE')
 call s:Tint('CurSearch', s:color.wetwhite, s:color.wetdebug, 'NONE')
 call s:Tint('IncSearch', s:color.wetwhite, s:color.wetdebug, 'NONE')
+
+call s:Tint('Visual', s:color.wetdebug, s:color.wetshell, 'NONE')
+call s:Tint('VisualNos', s:color.wetdebug, s:color.wetshell, 'NONE')
 
 call s:Tint('Visual', s:color.wetdebug, s:color.wetshell, 'NONE')
 call s:Tint('VisualNos', s:color.wetdebug, s:color.wetshell, 'NONE')
@@ -252,31 +261,22 @@ call s:TintLink("WetBlue1", "jsonString")
 call s:TintLink('WetBlue1', 'markdownCode')
 
 " #### GIT GUTTER #########################################################
-call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetblue2, 'BOLD')
+call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetdebug, 'BOLD')
 call s:Tint('GitGutterChange', s:color.wetempty, s:color.wetblue2, 'BOLD')
 call s:Tint('GitGutterDelete', s:color.wetempty, s:color.weterror, 'BOLD')
-call s:Tint('GitGutterChangeDelete', s:color.wetempty, s:color.wetalert, 'BOLD')
-
-" #### COC        #########################################################
-call s:Tint('CocInfoSign', s:color.wetempty, s:color.wetdebug, 'BOLD')
-call s:Tint('CocHintSign', s:color.wetblack, s:color.wetdebug, 'NONE')
-call s:Tint('CocErrorSign', s:color.wetempty, s:color.weterror, 'BOLD')
-call s:Tint('CocWarningSign', s:color.wetempty, s:color.wetalert, 'BOLD')
-call s:Tint('CocSelectedText', s:color.wetempty, s:color.wetwhite, 'BOLD')
-call s:Tint('CocMarkdownLink', s:color.wetempty, s:color.wetblue2, 'NONE')
-call s:Tint('CocHighlightText', s:color.wetempty, s:color.wetempty, 'UNDERCURL')
-call s:TintLink('WetBold', 'CocBold')
-call s:TintLink('WetBold', 'CocItalic')
+call s:Tint('GitGutterChangeDelete', s:color.wetempty, s:color.weterror, 'BOLD')
 
 " #### DIAGNOSTIC #########################################################
-call s:Tint('DiagnosticHint', s:color.wetempty, s:color.wetwhite, 'BOLD')
-call s:Tint('DiagnosticInfo', s:color.wetempty, s:color.wetwhite, 'BOLD')
-call s:Tint('DiagnosticWarn', s:color.wetempty, s:color.wetalert, 'BOLD')
+call s:Tint('DiagnosticHint', s:color.wetempty, s:color.wetgray2, 'BOLD')
+call s:Tint('DiagnosticInfo', s:color.wetempty, s:color.wetgray2, 'BOLD')
+call s:Tint('DiagnosticWarn', s:color.wetempty, s:color.wetfocus, 'BOLD')
 call s:Tint('DiagnosticError', s:color.wetempty, s:color.weterror, 'BOLD')
-call s:Tint('DiagnosticSignHint', s:color.wetblue1, s:color.wetwhite, 'BOLD')
-call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetwhite, 'BOLD')
-call s:Tint('DiagnosticSignWarn', s:color.wetalert, s:color.wetwhite, 'BOLD')
-call s:Tint('DiagnosticSignError', s:color.weterror, s:color.wetwhite, 'BOLD')
+
+call s:Tint('DiagnosticSignHint', s:color.wetblue0, s:color.wetblue0, 'BOLD')
+call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetdebug, 'BOLD')
+call s:Tint('DiagnosticSignWarn', s:color.wetfocus, s:color.wetfocus, 'BOLD')
+call s:Tint('DiagnosticSignError', s:color.weterror, s:color.weterror, 'BOLD')
+call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetfocus, 'BOLD')
 
 " #### TELESCOPE  #########################################################
 call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetblue0, 'NONE')
@@ -284,7 +284,7 @@ call s:Tint('TelescopeTitle', s:color.wetempty, s:color.wetwhite, 'BOLD')
 call s:Tint('TelescopeMultiSelection', s:color.wetempty, s:color.wetdebug, 'BOLD')
 
 " call s:Tint('TelescopeResultsNormal', s:color.wetmenu, s:color.wetwhite, 'NONE')
-call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetdebug, 'NONE')
+call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetshell, 'NONE')
 call s:Tint('TelescopePreviewNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
 call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetblue0, 'NONE')
 call s:Tint('TelescopeSelection', s:color.wetmenu, s:color.wetshell, 'NONE')
@@ -294,13 +294,6 @@ call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
 " call s:Tint('@module.builtin', s:color.wetempty , s:color.wetblue1, 'NONE')
 " call s:Tint('@function.builtin', s:color.wetempty , s:color.wetblue1, 'UNDERLINE')
 " call s:Tint('@function.call', s:color.wetempty , s:color.weterror, 'UNDERLINE')
-
-" nvim cmp
-call s:Tint('CmpItemKind', s:color.wetempty , s:color.wetblue0, 'NONE')
-call s:Tint('CmpItemAbbr', s:color.wetempty , s:color.wetshell, 'NONE')
-call s:Tint('CmpItemAbbrMatch', s:color.wetempty , s:color.wetblue2, 'NONE')
-call s:Tint('CmpItemAbbrMatchFuzzy', s:color.wetempty , s:color.wetblue2, 'NONE')
-call s:Tint('CmpItemAbbrDeprecated', s:color.wetempty , s:color.wetwarn, 'NONE')
 
 " zig
 call s:Tint('@property', s:color.wetempty , s:color.wetshell, 'NONE')
@@ -313,6 +306,10 @@ call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
 
+"hi whichkey
+call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('WhichKey', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('WhichKeyDesc', s:color.wetempty, s:color.wetblue1, 'NONE')
 
 call s:Tint('TodoBgTodo', s:color.wetempty, s:color.wetblue1, 'NONE')
 call s:Tint('TodoFgTodo', s:color.wetempty, s:color.wetblue0, 'NONE')
