@@ -59,14 +59,6 @@ let s:color.wetmenu = [ 65, '#383b4f']
 let s:color.wetfocus = [ 65, '#f5aa85']
 " let s:color.wetthing = [ 65, '#857a75']
 let s:color.wetthing = [245, '#7c7c9c']
-" 
-" 336re0
-
-" let s:color.wetfocus = [ 65, '#d88484']
-" let s:color.wetfocus = [ 65, '#cbe278']
-
-" 323831
-" 414940
 
 let s:color.wetblack = [232, '#080808']
 let s:color.wetgray0 = [233, '#191919']
@@ -121,18 +113,19 @@ call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
 
 call s:TintLink('WetBlue1', 'CursorLineNr')
 
-call s:Tint('Pmenu', s:color.wetmenu, s:color.wetshell, 'NOCOMBINE')
+call s:Tint('Pmenu', s:color.wetgray0, s:color.wetshell, 'NOCOMBINE')
 call s:Tint('PmenuSel', s:color.wetshell, s:color.wetblack, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
 call s:TintLink('Pmenu', 'NormalFloat')
 
 call s:Tint('ColorColumn', s:color.wetgray1, s:color.wetempty, 'NONE')
 
-call s:Tint('Search', s:color.wetshell, s:color.wetdebug, 'NONE')
-call s:TintLink('Search', 'IncSearch')
+call s:Tint('Search', s:color.wetdebug, s:color.wetblack, 'NONE')
+call s:Tint('CurSearch', s:color.wetwhite, s:color.wetdebug, 'NONE')
+call s:Tint('IncSearch', s:color.wetwhite, s:color.wetdebug, 'NONE')
 
-call s:Tint('Visual', s:color.wetblue1, s:color.wetgray1, 'NONE')
-call s:Tint('VisualNos', s:color.wetblue2, s:color.wetgray1, 'NONE')
+call s:Tint('Visual', s:color.wetdebug, s:color.wetshell, 'NONE')
+call s:Tint('VisualNos', s:color.wetdebug, s:color.wetshell, 'NONE')
 
 call s:Tint('StatusLine', s:color.wetgray0, s:color.wetshell, 'BOLD')
 
@@ -320,3 +313,18 @@ call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
 
+
+call s:Tint('TodoBgTodo', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('TodoFgTodo', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('TodoBgNote', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('TodoFgNote', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('TodoBgFix', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('TodoFgFix', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('TodoBgWarn', s:color.wetempty, s:color.wetfocus, 'NONE')
+call s:Tint('TodoFgWarn', s:color.wetempty, s:color.wetfocus, 'NONE')
+call s:TintLink('TodoBgWarn', 'TodoBgPerf')
+call s:TintLink('TodoFgWarn', 'TodoFgPerf')
+call s:TintLink('TodoBgWarn', 'TodoBgHack')
+call s:TintLink('TodoFgWarn', 'TodoFgHack')
+call s:TintLink('TodoBgWarn', 'TodoBgPerf')
+call s:TintLink('TodoFgWarn', 'TodoFgPerf')
