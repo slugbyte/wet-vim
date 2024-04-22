@@ -51,11 +51,8 @@ let s:color.wetblue2  = [117, '#abcbed']
 let s:color.weterror = [196, '#D70000']
 let s:color.wetwarn = [180, '#f5aa85' ]
 let s:color.wetdebug = [28, '#637a60']
-" let s:color.wetpop = [35, '#7bb274']
-" let s:color.wetpop2 = [35, '#7bb274']
-" let s:color.wetpop = [35, '#a9cca5']
-let s:color.wetpop = [35, '#bce2b7']
-let s:color.wetpop2 = [35, '#8aad85']
+let s:color.wetgreen0 = [35, '#bce2b7']
+let s:color.wetgreen1 = [35, '#8aad85']
 
 let s:color.wetblack = [232, '#080808']
 let s:color.wetgray0 = [233, '#191919']
@@ -298,9 +295,9 @@ call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
 call s:Tint('@property', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@variable.member', s:color.wetempty , s:color.wetgray3, 'NONE')
 call s:Tint('function', s:color.wetempty , s:color.wetdebug, 'NONE')
-call s:Tint('Type', s:color.wetempty , s:color.wetpop2, 'NONE')
+call s:Tint('Type', s:color.wetempty , s:color.wetgreen1, 'NONE')
 call s:Tint('variable', s:color.wetempty , s:color.wetshell, 'UNDERCURL')
-call s:Tint('Structure', s:color.wetempty , s:color.wetpop, 'NONE')
+call s:Tint('Structure', s:color.wetempty , s:color.wetgreen0, 'NONE')
 call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
