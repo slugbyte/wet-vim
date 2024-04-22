@@ -49,20 +49,21 @@ let s:color.wetblue1 =  [ 74, '#9fbdf5']
 let s:color.wetblue2  = [117, '#abcbed']
 
 let s:color.weterror = [196, '#D70000']
-let s:color.wetalert = [217, '#f3ea2a']
-let s:color.wetdebug = [ 65, '#637a60']
-
-let s:color.wetwarn = [217, '#ff7777']
-let s:color.wetmenu = [ 65, '#383b4f']
-let s:color.wetfocus = [ 65, '#f5aa85']
-let s:color.wetthing = [245, '#7c7c9c']
+let s:color.wetwarn = [180, '#f5aa85' ]
+let s:color.wetdebug = [28, '#637a60']
+" let s:color.wetpop = [35, '#7bb274']
+" let s:color.wetpop2 = [35, '#7bb274']
+" let s:color.wetpop = [35, '#a9cca5']
+let s:color.wetpop = [35, '#bce2b7']
+let s:color.wetpop2 = [35, '#8aad85']
 
 let s:color.wetblack = [232, '#080808']
 let s:color.wetgray0 = [233, '#191919']
 let s:color.wetgray1 = [235, '#343444']
 let s:color.wetgray2 = [237, '#444457']
-let s:color.wetgray3 = [244, '#778492']
-let s:color.wetgray4 = [245, '#8A8A9A']
+let s:color.wetgray3 = [241, '#7c7c9c']
+let s:color.wetgray4 = [244, '#778492']
+let s:color.wetgray5 = [245, '#8A8A9A']
 let s:color.wetshell = [252, '#cdd6df']
 let s:color.wetwhite = [231, '#FFFFFF']
 let s:color.wetempty = ['NONE', 'NONE']
@@ -70,7 +71,6 @@ let s:color.wetempty = ['NONE', 'NONE']
 call s:Tint('WetEmpty', s:color.wetempty, s:color.wetempty, 'NONE')
 
 call s:Tint('WetError', s:color.wetempty, s:color.weterror, 'NONE')
-call s:Tint('WetAlert', s:color.wetempty, s:color.wetalert, 'NONE')
 call s:Tint('WetDebug', s:color.wetempty, s:color.wetdebug, 'NONE')
 
 call s:Tint('WetBlue0', s:color.wetempty, s:color.wetblue0, 'NONE')
@@ -80,8 +80,8 @@ call s:Tint('WetBlue2', s:color.wetempty, s:color.wetblue2, 'NONE')
 call s:Tint('WetGray0', s:color.wetempty, s:color.wetgray0, 'NONE')
 call s:Tint('WetGray1', s:color.wetempty, s:color.wetgray1, 'NONE')
 call s:Tint('WetGray1', s:color.wetempty, s:color.wetgray2, 'NONE')
-call s:Tint('WetGray3', s:color.wetempty, s:color.wetgray3, 'NONE')
-call s:Tint('WetGray4', s:color.wetempty, s:color.wetgray4, 'NONE')
+call s:Tint('WetGray3', s:color.wetempty, s:color.wetgray4, 'NONE')
+call s:Tint('WetGray4', s:color.wetempty, s:color.wetgray5, 'NONE')
 
 call s:Tint('WetWhite', s:color.wetempty, s:color.wetwhite, 'NONE')
 call s:Tint('WetBlack', s:color.wetempty, s:color.wetblack, 'NONE')
@@ -93,7 +93,6 @@ call s:TintLink('WetShell', 'Normal')
 call s:TintLink('WetBlue0', 'Debug')
 call s:TintLink('WetBlue1', 'NonText')
 call s:TintLink('WetError', 'ErrorMsg')
-call s:TintLink('WetAlert', 'Ignore')
 call s:TintLink('WetError', 'Conceal')
 
 call s:Tint('WetBold', s:color.wetempty, s:color.wetblue2, 'BOLD')
@@ -118,7 +117,7 @@ call s:TintLink('Pmenu', 'NormalFloat')
 " nvim cmp
 call s:Tint('CmpItemKind', s:color.wetempty, s:color.wetshell, 'NONE')
 " call s:Tint('CmpItemKindSnippet', s:color.wetempty, s:color.wetblue0, 'NONE')
-call s:Tint('CmpItemKindText', s:color.wetempty, s:color.wetgray4, 'NONE')
+call s:Tint('CmpItemKindText', s:color.wetempty, s:color.wetgray5, 'NONE')
 call s:Tint('CmpItemAbbr', s:color.wetempty, s:color.wetshell, 'NONE')
 call s:Tint('CmpItemAbbrMatch', s:color.wetempty, s:color.wetempty, 'NONE')
 call s:Tint('CmpItemAbbrMatchFuzzy', s:color.wetempty, s:color.wetempty, 'NONE')
@@ -269,14 +268,14 @@ call s:Tint('GitGutterChangeDelete', s:color.wetempty, s:color.weterror, 'BOLD')
 " #### DIAGNOSTIC #########################################################
 call s:Tint('DiagnosticHint', s:color.wetempty, s:color.wetgray2, 'BOLD')
 call s:Tint('DiagnosticInfo', s:color.wetempty, s:color.wetgray2, 'BOLD')
-call s:Tint('DiagnosticWarn', s:color.wetempty, s:color.wetfocus, 'BOLD')
+call s:Tint('DiagnosticWarn', s:color.wetempty, s:color.wetwarn, 'BOLD')
 call s:Tint('DiagnosticError', s:color.wetempty, s:color.weterror, 'BOLD')
 
 call s:Tint('DiagnosticSignHint', s:color.wetblue0, s:color.wetblue0, 'BOLD')
 call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetdebug, 'BOLD')
-call s:Tint('DiagnosticSignWarn', s:color.wetfocus, s:color.wetfocus, 'BOLD')
+call s:Tint('DiagnosticSignWarn', s:color.wetwarn, s:color.wetwarn, 'BOLD')
 call s:Tint('DiagnosticSignError', s:color.weterror, s:color.weterror, 'BOLD')
-call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetfocus, 'BOLD')
+call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetwarn, 'BOLD')
 
 " #### TELESCOPE  #########################################################
 call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetblue0, 'NONE')
@@ -287,7 +286,7 @@ call s:Tint('TelescopeMultiSelection', s:color.wetempty, s:color.wetdebug, 'BOLD
 call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetshell, 'NONE')
 call s:Tint('TelescopePreviewNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
 call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetblue0, 'NONE')
-call s:Tint('TelescopeSelection', s:color.wetmenu, s:color.wetshell, 'NONE')
+call s:Tint('TelescopeSelection', s:color.wetblue0, s:color.wetshell, 'NONE')
 call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
 
 " call s:Tint('@variable', s:color.wetempty , s:color.w, 'NONE')
@@ -297,11 +296,11 @@ call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
 
 " zig
 call s:Tint('@property', s:color.wetempty , s:color.wetshell, 'NONE')
-call s:Tint('@variable.member', s:color.wetempty , s:color.wetthing, 'NONE')
+call s:Tint('@variable.member', s:color.wetempty , s:color.wetgray3, 'NONE')
 call s:Tint('function', s:color.wetempty , s:color.wetdebug, 'NONE')
-call s:Tint('Type', s:color.wetempty , s:color.wetfocus, 'NONE')
+call s:Tint('Type', s:color.wetempty , s:color.wetpop2, 'NONE')
 call s:Tint('variable', s:color.wetempty , s:color.wetshell, 'UNDERCURL')
-call s:Tint('Structure', s:color.wetempty , s:color.wetfocus, 'NONE')
+call s:Tint('Structure', s:color.wetempty , s:color.wetpop, 'NONE')
 call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
@@ -317,8 +316,8 @@ call s:Tint('TodoBgNote', s:color.wetempty, s:color.wetblue1, 'NONE')
 call s:Tint('TodoFgNote', s:color.wetempty, s:color.wetblue0, 'NONE')
 call s:Tint('TodoBgFix', s:color.wetempty, s:color.weterror, 'NONE')
 call s:Tint('TodoFgFix', s:color.wetempty, s:color.weterror, 'NONE')
-call s:Tint('TodoBgWarn', s:color.wetempty, s:color.wetfocus, 'NONE')
-call s:Tint('TodoFgWarn', s:color.wetempty, s:color.wetfocus, 'NONE')
+call s:Tint('TodoBgWarn', s:color.wetempty, s:color.wetwarn, 'NONE')
+call s:Tint('TodoFgWarn', s:color.wetempty, s:color.wetwarn, 'NONE')
 call s:TintLink('TodoBgWarn', 'TodoBgPerf')
 call s:TintLink('TodoFgWarn', 'TodoFgPerf')
 call s:TintLink('TodoBgWarn', 'TodoBgHack')
