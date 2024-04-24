@@ -299,9 +299,22 @@ call s:Tint('function', s:color.wetempty , s:color.wetgray6, 'NONE')
 call s:Tint('Type', s:color.wetempty , s:color.wetgreen1, 'NONE')
 call s:Tint('variable', s:color.wetempty , s:color.wetshell, 'UNDERCURL')
 call s:Tint('Structure', s:color.wetempty , s:color.wetgreen0, 'NONE')
+call s:Tint('Special', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
+call s:Tint('@builtin.function', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
+call s:Tint('@keyword.import', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
 call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
+" call s:Tint('String', s:color.wetempty , s:color.wetgray4, 'NONE')
+call s:Tint('@string.escape', s:color.wetempty , s:color.wetwarn, 'NONE')
+hi String guifg=#88aaca
+" hi String guifg=#a4e494
+
+" call s:TintLink( 'WetBlue0', '@function.builtin')
+call s:TintLink( 'WetBlue0', '@markup.list')
+call s:TintLink( 'WetGray3', 'PreProc')
+call s:TintLink( 'WetGray3', 'Include')
+call s:TintLink( 'WetGray3', 'Typedef')
 
 "hi whichkey
 call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetblue0, 'NONE')
@@ -323,6 +336,15 @@ call s:TintLink('TodoFgWarn', 'TodoFgHack')
 call s:TintLink('TodoBgWarn', 'TodoBgPerf')
 call s:TintLink('TodoFgWarn', 'TodoFgPerf')
 
+" markdown
+" call s:TintLink( 'WetBlue0', 'SpellBad')
+call s:TintLink( 'WetBlue0', '@markup.list')
+call s:TintLink( 'WetDebug', '@markup.heading')
+call s:TintLink( 'WetGray3', '@markup.quote')
+call s:TintLink( 'WetGray3', '@markup.link')
+call s:TintLink( 'WetBlue1', '@markup.link.label')
+call s:TintLink( 'WetGray3', '@markup.strong')
+call s:TintLink( 'WetGray3', '@markup.italic')
 
 " hi @variable.member guifg=#888888
 hi link Operator WetBlue0
