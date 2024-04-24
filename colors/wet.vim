@@ -61,6 +61,7 @@ let s:color.wetgray2 = [237, '#444457']
 let s:color.wetgray3 = [241, '#7c7c9c']
 let s:color.wetgray4 = [244, '#778492']
 let s:color.wetgray5 = [245, '#8A8A9A']
+let s:color.wetgray6 = [245, '#AAAAAA']
 let s:color.wetshell = [252, '#cdd6df']
 let s:color.wetwhite = [231, '#FFFFFF']
 let s:color.wetempty = ['NONE', 'NONE']
@@ -257,10 +258,10 @@ call s:TintLink("WetBlue1", "jsonString")
 call s:TintLink('WetBlue1', 'markdownCode')
 
 " #### GIT GUTTER #########################################################
-call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetdebug, 'BOLD')
+call s:Tint('GitGutterAdd', s:color.wetempty, s:color.wetgray2, 'BOLD')
 call s:Tint('GitGutterChange', s:color.wetempty, s:color.wetblue2, 'BOLD')
-call s:Tint('GitGutterDelete', s:color.wetempty, s:color.weterror, 'BOLD')
-call s:Tint('GitGutterChangeDelete', s:color.wetempty, s:color.weterror, 'BOLD')
+call s:Tint('GitGutterDelete', s:color.wetempty, s:color.wetwarn, 'BOLD')
+call s:Tint('GitGutterChangeDelete', s:color.wetempty, s:color.wetwarn, 'BOLD')
 
 " #### DIAGNOSTIC #########################################################
 call s:Tint('DiagnosticHint', s:color.wetempty, s:color.wetgray2, 'BOLD')
@@ -272,7 +273,7 @@ call s:Tint('DiagnosticSignHint', s:color.wetblue0, s:color.wetblue0, 'BOLD')
 call s:Tint('DiagnosticSignInfo', s:color.wetdebug, s:color.wetdebug, 'BOLD')
 call s:Tint('DiagnosticSignWarn', s:color.wetwarn, s:color.wetwarn, 'BOLD')
 call s:Tint('DiagnosticSignError', s:color.weterror, s:color.weterror, 'BOLD')
-call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetwarn, 'BOLD')
+call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetgray2, 'BOLD')
 
 " #### TELESCOPE  #########################################################
 call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetblue0, 'NONE')
@@ -293,8 +294,8 @@ call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
 
 " zig
 call s:Tint('@property', s:color.wetempty , s:color.wetshell, 'NONE')
-call s:Tint('@variable.member', s:color.wetempty , s:color.wetgray3, 'NONE')
-call s:Tint('function', s:color.wetempty , s:color.wetdebug, 'NONE')
+call s:Tint('@variable.member', s:color.wetempty , s:color.wetshell, 'NONE')
+call s:Tint('function', s:color.wetempty , s:color.wetgray6, 'NONE')
 call s:Tint('Type', s:color.wetempty , s:color.wetgreen1, 'NONE')
 call s:Tint('variable', s:color.wetempty , s:color.wetshell, 'UNDERCURL')
 call s:Tint('Structure', s:color.wetempty , s:color.wetgreen0, 'NONE')
@@ -307,10 +308,10 @@ call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetblue0, 'NONE')
 call s:Tint('WhichKey', s:color.wetempty, s:color.wetblue0, 'NONE')
 call s:Tint('WhichKeyDesc', s:color.wetempty, s:color.wetblue1, 'NONE')
 
-call s:Tint('TodoBgTodo', s:color.wetempty, s:color.wetblue1, 'NONE')
-call s:Tint('TodoFgTodo', s:color.wetempty, s:color.wetblue0, 'NONE')
-call s:Tint('TodoBgNote', s:color.wetempty, s:color.wetblue1, 'NONE')
-call s:Tint('TodoFgNote', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('TodoBgTodo', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('TodoFgTodo', s:color.wetempty, s:color.wetgray2, 'NONE')
+call s:Tint('TodoBgNote', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('TodoFgNote', s:color.wetempty, s:color.wetgray2, 'NONE')
 call s:Tint('TodoBgFix', s:color.wetempty, s:color.weterror, 'NONE')
 call s:Tint('TodoFgFix', s:color.wetempty, s:color.weterror, 'NONE')
 call s:Tint('TodoBgWarn', s:color.wetempty, s:color.wetwarn, 'NONE')
@@ -321,3 +322,33 @@ call s:TintLink('TodoBgWarn', 'TodoBgHack')
 call s:TintLink('TodoFgWarn', 'TodoFgHack')
 call s:TintLink('TodoBgWarn', 'TodoBgPerf')
 call s:TintLink('TodoFgWarn', 'TodoFgPerf')
+
+
+" hi @variable.member guifg=#888888
+hi link Operator WetBlue0
+hi link @keyword.operator WetBlue0
+" hi @variable.member guifg=#fff0f0
+" hi Operator guifg=#885544
+" hi @keyword.operator guifg=#885544
+" hi Function guifg=#aaaaaa
+" hi Function guifg=#aaaaaa
+" hi Keyword guifg=#885544
+hi Keyword guifg=#657474
+" hi String guifg=#aa7777
+" hi @constant.builtin guifg=#885544
+
+
+" rose
+" hi Operator guifg=#885544
+" hi @keyword.operator guifg=#885544
+" hi Function guifg=#aaaaaa
+" hi Function guifg=#aaaaaa
+" hi Keyword guifg=#885544
+" hi String guifg=#aa7777
+
+" gray
+" hi Operator guifg=#badbad
+" hi @keyword.operator guifg=#bce2b7
+" hi Function guifg=#aaaaaa
+" hi Keyword guifg=#888888
+" hi String guifg=#7777aa

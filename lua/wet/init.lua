@@ -16,6 +16,10 @@ local colors = {
   wetempty = 'NONE',
 }
 
+local function setup_treesiter_highlights()
+  vim.api.nvim_set_hl(0, "@comment.documentation", { link = "WetBlue0" })
+end
+
 local lualine = {
   normal = {
     a = { bg = colors.wetgray0, fg = colors.wetblue1, gui = 'bold' },
@@ -52,4 +56,5 @@ local lualine = {
 return {
   colors = colors,
   lualine = lualine,
+  setup_treesiter_highlights = setup_treesiter_highlights,
 }
