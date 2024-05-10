@@ -285,7 +285,7 @@ call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetshell, 'NONE')
 call s:Tint('TelescopePreviewNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
 call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetblue0, 'NONE')
 call s:Tint('TelescopeSelection', s:color.wetblue0, s:color.wetshell, 'NONE')
-call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetblue2, 'NONE')
 
 " call s:Tint('@variable', s:color.wetempty , s:color.w, 'NONE')
 " call s:Tint('@module.builtin', s:color.wetempty , s:color.wetblue1, 'NONE')
@@ -305,6 +305,12 @@ call s:Tint('@keyword.import', s:color.wetempty , s:color.wetdebug, 'NONE') " st
 call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
+call s:Tint('@attribute', s:color.wetempty , s:color.wetshell, 'NONE')
+call s:Tint('@variable.parameter', s:color.wetempty , s:color.wetgray3, 'NONE')
+call s:Tint('@markup.raw', s:color.wetempty , s:color.wetblue1, 'NONE')
+call s:Tint('@markup.raw.block', s:color.wetempty , s:color.wetgray6, 'NONE')
+
+
 " call s:Tint('String', s:color.wetempty , s:color.wetgray4, 'NONE')
 call s:Tint('@string.escape', s:color.wetempty , s:color.wetwarn, 'NONE')
 hi String guifg=#88aaca
@@ -315,6 +321,7 @@ call s:TintLink( 'WetBlue0', '@markup.list')
 call s:TintLink( 'WetGray3', 'PreProc')
 call s:TintLink( 'WetGray3', 'Include')
 call s:TintLink( 'WetGray3', 'Typedef')
+
 
 "hi whichkey
 call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetblue0, 'NONE')
@@ -374,3 +381,8 @@ hi Keyword guifg=#657474
 " hi Function guifg=#aaaaaa
 " hi Keyword guifg=#888888
 " hi String guifg=#7777aa
+"
+" au colorscheme *.lua hi link @keyword.function WetBlue0
+" au bufread *.lua hi link @keyword.function Type
+
+au bufread,bufenter *lua hi! link @keyword.function Type
