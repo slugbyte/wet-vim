@@ -304,21 +304,17 @@ call s:Tint('DiagnosticSignError', s:color.weterror, s:color.weterror, 'BOLD')
 call s:Tint('LightBulbSign', s:color.wetempty, s:color.wetgray2, 'BOLD')
 
 " #### TELESCOPE  #########################################################
-call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetblue0, 'NONE')
+call s:Tint('TelescopeNormal', s:color.wetblack, s:color.wetgray4, 'NONE')
 call s:Tint('TelescopeTitle', s:color.wetempty, s:color.wetwhite, 'BOLD')
 call s:Tint('TelescopeMultiSelection', s:color.wetempty, s:color.wetdebug, 'BOLD')
 
 " call s:Tint('TelescopeResultsNormal', s:color.wetmenu, s:color.wetwhite, 'NONE')
 call s:Tint('TelescopePromptNormal', s:color.wetblack, s:color.wetshell, 'NONE')
 call s:Tint('TelescopePreviewNormal', s:color.wetblack, s:color.wetwhite, 'NONE')
-call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetblue0, 'NONE')
-call s:Tint('TelescopeSelection', s:color.wetblue0, s:color.wetshell, 'NONE')
-call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetblue2, 'NONE')
-
-" call s:Tint('@variable', s:color.wetempty , s:color.w, 'NONE')
-" call s:Tint('@module.builtin', s:color.wetempty , s:color.wetblue1, 'NONE')
-" call s:Tint('@function.builtin', s:color.wetempty , s:color.wetblue1, 'UNDERLINE')
-" call s:Tint('@function.call', s:color.wetempty , s:color.weterror, 'UNDERLINE')
+call s:Tint('TelescopeBorder', s:color.wetblack, s:color.wetshell, 'NONE')
+call s:Tint('TelescopePreviewBorder', s:color.wetblack, s:color.wetshell, 'NONE')
+call s:Tint('TelescopeSelection', s:color.wetdebug, s:color.wetshell, 'NONE')
+call s:Tint('TelescopeMatching', s:color.wetempty, s:color.wetgreen1, 'NONE')
 
 " zig
 call s:Tint('@property', s:color.wetempty , s:color.wetshell, 'NONE')
@@ -327,9 +323,9 @@ call s:Tint('function', s:color.wetempty , s:color.wetgray6, 'NONE')
 call s:Tint('Type', s:color.wetempty , s:color.wetgreen1, 'NONE')
 call s:Tint('variable', s:color.wetempty , s:color.wetshell, 'UNDERCURL')
 call s:Tint('Structure', s:color.wetempty , s:color.wetgreen0, 'NONE')
-call s:Tint('Special', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
-call s:Tint('@builtin.function', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
-call s:Tint('@keyword.import', s:color.wetempty , s:color.wetdebug, 'NONE') " stuff like null and undufinde
+call s:Tint('Special', s:color.wetempty , s:color.wetdebug, 'NONE')
+call s:Tint('@builtin.function', s:color.wetempty , s:color.wetdebug, 'NONE')
+call s:Tint('@keyword.import', s:color.wetempty , s:color.wetdebug, 'NONE')
 call s:Tint('@lsp.type.variable', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('@lsp.type.namespace', s:color.wetempty , s:color.wetshell, 'NONE')
 call s:Tint('Constant', s:color.wetempty , s:color.wetshell, 'NONE')
@@ -352,9 +348,9 @@ call s:TintLink( 'WetGray3', 'Typedef')
 
 
 "hi whichkey
-call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetblue0, 'NONE')
-call s:Tint('WhichKey', s:color.wetempty, s:color.wetblue0, 'NONE')
-call s:Tint('WhichKeyDesc', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('WhichKeyGroup', s:color.wetempty, s:color.wetgreen1, 'NONE')
+call s:Tint('WhichKey', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('WhichKeyDesc', s:color.wetempty, s:color.wetshell, 'NONE')
 
 call s:Tint('TodoBgTodo', s:color.wetempty, s:color.wetdebug, 'NONE')
 call s:Tint('TodoFgTodo', s:color.wetempty, s:color.wetgray2, 'NONE')
