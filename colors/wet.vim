@@ -1,4 +1,5 @@
 "                                   _/
+"
 "  _/      _/      _/    _/_/    _/_/_/_/
 " _/      _/      _/  _/_/_/_/    _/
 "  _/  _/  _/  _/    _/          _/
@@ -44,12 +45,12 @@ endfunction
 " #### COLOR      #########################################################
 let s:color = {}
 
-let s:color.wetblue0 =  [ 25, '#3e6792']
-let s:color.wetblue1 =  [ 74, '#9fbdf5']
+let s:color.wetblue0 =  [25, '#3e6792']
+let s:color.wetblue1 =  [74, '#9fbdf5']
 let s:color.wetblue2  = [117, '#abcbed']
 
 let s:color.weterror = [196, '#D70000']
-let s:color.wetwarn = [180, '#f5aa85' ]
+let s:color.wetwarn =  [180, '#f5aa85' ]
 let s:color.wetdebug = [28, '#637a60']
 let s:color.wetgreen0 = [35, '#bce2b7']
 let s:color.wetgreen1 = [35, '#8aad85']
@@ -93,6 +94,7 @@ call s:TintLink('WetBlue1', 'NonText')
 call s:TintLink('WetError', 'ErrorMsg')
 call s:TintLink('WetError', 'Conceal')
 
+call s:Tint('Normal', s:color.wetblack, s:color.wetshell, 'NONE')
 call s:Tint('WetBold', s:color.wetempty, s:color.wetblue2, 'BOLD')
 call s:Tint('WetItalic', s:color.wetempty, s:color.wetblue2, 'ITALIC')
 call s:Tint('WetUnderline', s:color.wetempty, s:color.wetempty, 'UNDERLINE')
@@ -104,13 +106,39 @@ call s:Tint('Tag', s:color.wetempty, s:color.wetdebug, 'UNDERLINE')
 call s:Tint('WildMenu', s:color.wetempty, s:color.wetblue0, 'BOLD')
 call s:Tint('TermCursor', s:color.wetshell, s:color.weterror, 'NONE')
 call s:Tint('CursorLine', s:color.wetgray0, s:color.wetempty, 'NONE')
-
-call s:TintLink('WetBlue1', 'CursorLineNr')
+call s:Tint('LineNr', s:color.wetempty, s:color.wetgray1, 'NONE')
+call s:Tint('CursorLineNr', s:color.wetempty, s:color.wetdebug, 'NONE')
 
 call s:Tint('Pmenu', s:color.wetgray0, s:color.wetshell, 'NOCOMBINE')
 call s:Tint('PmenuSel', s:color.wetdebug, s:color.wetempty, 'NONE')
 call s:TintLink('Pmenu', 'PmenuThumb')
-call s:TintLink('Pmenu', 'NormalFloat')
+call s:TintLink('Pmenu', 'NlormalFloat')
+
+call s:Tint('NormalFloat', s:color.wetgray0, s:color.wetempty, 'NONE')
+call s:Tint('FloatTitle', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('FloatBorder', s:color.wetgray1, s:color.wetempty, 'NONE')
+
+" netrw
+call s:Tint('Directory', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('OilFile', s:color.wetempty, s:color.wetshell, 'NONE')
+call s:Tint('OilDir', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('OilDirIcon', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('OilSocket', s:color.wetempty, s:color.wetshell, 'NONE')
+call s:Tint('OilLink', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('OilLinkTarget', s:color.wetempty, s:color.wetblue0, 'NONE')
+call s:Tint('OilFile', s:color.wetempty, s:color.wetshell, 'NONE')
+
+call s:Tint('OilCreate', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('OilCopy', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('OilRestore', s:color.wetempty, s:color.wetdebug, 'NONE')
+
+call s:Tint('OilMove', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('OilChange', s:color.wetempty, s:color.wetblue1, 'NONE')
+
+call s:Tint('OilDelete', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('OilPurge', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('OilTrash', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('OilTrashSourcePath', s:color.wetempty, s:color.weterror, 'NONE')
 
 " nvim cmp
 call s:Tint('CmpItemKind', s:color.wetempty, s:color.wetshell, 'NONE')
@@ -121,7 +149,7 @@ call s:Tint('CmpItemAbbrMatch', s:color.wetempty, s:color.wetempty, 'NONE')
 call s:Tint('CmpItemAbbrMatchFuzzy', s:color.wetempty, s:color.wetempty, 'NONE')
 call s:Tint('CmpItemAbbrDeprecated', s:color.wetempty, s:color.wetgray2, 'NONE')
 
-call s:Tint('ColorColumn', s:color.wetgray1, s:color.wetempty, 'NONE')
+call s:Tint('ColorColumn', s:color.wetgray0, s:color.wetgreen0, 'NONE') 
 
 call s:Tint('Search', s:color.wetdebug, s:color.wetblack, 'NONE')
 call s:Tint('CurSearch', s:color.wetwhite, s:color.wetdebug, 'NONE')
@@ -138,10 +166,10 @@ call s:Tint('StatusLine', s:color.wetgray0, s:color.wetshell, 'BOLD')
 call s:Tint('VertSplit', s:color.wetgray1, s:color.wetblack, 'NONE')
 call s:Tint('Split', s:color.wetgray1, s:color.wetblack, 'NONE')
 
-call s:TintLink('WetEmpty', 'LineNr')
+" call s:TintLink('WetEmpty', 'LineNr')
 call s:TintLink('WetEmpty', 'Folded')
 call s:TintLink('WetEmpty', 'Tabline')
-call s:TintLink('WetEmpty', 'Directory')
+" call s:TintLink('WetEmpty', 'Directory')
 call s:TintLink('WetEmpty', 'FoldColumn')
 call s:TintLink('WetEmpty', 'SignColumn')
 call s:TintLink('WetEmpty', 'TablineSel')
@@ -353,6 +381,19 @@ call s:TintLink( 'WetBlue1', '@markup.link.label')
 call s:TintLink( 'WetGray3', '@markup.strong')
 call s:TintLink( 'WetGray3', '@markup.italic')
 
+call s:Tint('sqlStatement', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('sqlKeyword', s:color.wetempty, s:color.wetgreen1, 'NONE')
+call s:Tint('sqlOperator', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('sqlConditional', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('sqlVariable', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('sqlType', s:color.wetempty, s:color.wetdebug, 'NONE')
+call s:Tint('sqlSpecial', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('sqlString', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('sqlNumber', s:color.wetempty, s:color.wetblue1, 'NONE')
+call s:Tint('sqlError', s:color.wetempty, s:color.weterror, 'NONE')
+call s:Tint('sqlUnknownFunk', s:color.wetempty, s:color.wetgray2, 'NONE')
+call s:Tint('sqlFunction', s:color.wetempty, s:color.wetblue0, 'NONE')
+
 " hi @variable.member guifg=#888888
 hi link Operator WetBlue0
 hi link @keyword.operator WetBlue0
@@ -386,3 +427,6 @@ hi Keyword guifg=#657474
 " au bufread *.lua hi link @keyword.function Type
 
 au bufread,bufenter *lua hi! link @keyword.function Type
+" au filetype oil hi! Normal guifg=#555555
+
+
